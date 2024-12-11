@@ -1,0 +1,29 @@
+//New loader for Bigin 2 colors without gap
+
+.loadingsplash{
+  position: fixed;
+  /* display: none; */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+            to right,
+            #32A0FD 0%,    /* Fully visible blue */
+            #23ae73 25%,   /* Transition merging point */
+            #149860 50%,   /* Fully visible green */
+            #23ae73 75%,   /* Transition merging point */
+            #32A0FD 100% 
+  );
+  width: 100%;
+  height: 3px;
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: gradient 1s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+      
+@keyframes gradient { 
+   0%   { background-position: 0 0; }
+   100% { background-position: -200% 0; }
+}
